@@ -7,7 +7,7 @@ import Missed from './components/Missed/Missed';
 import Box from './components/Box/Box';
 import GameOver from './components/GameOver/GameOver';
 
-const gameAPI = 'http://hangman-api.herokuapp.com/hangman';
+const gameAPI = 'https://hangman-api.herokuapp.com/hangman';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,7 +37,7 @@ class App extends React.Component {
         steps: 0,
         over: false,
         win: false,
-        solutionAPI: `http://hangman-api.herokuapp.com/hangman?token=${res.data.token}`,
+        solutionAPI: `https://hangman-api.herokuapp.com/hangman?token=${res.data.token}`,
         // eslint-disable-next-line react/no-unused-state
         blankSolution: res.data.hangman,
       });
