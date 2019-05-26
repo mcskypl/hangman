@@ -1,0 +1,69 @@
+.wrapperItem {
+  position: relative;
+  background-color: red;
+}
+
+img {
+  transform: scale(0.4);
+  position: absolute;
+}
+
+.head {
+  z-index: 9;
+  top: 10px;
+  left: 55px;
+}
+
+.neck {
+  top: 124px;
+  left: 128px;
+}
+
+.corpus {
+  top: 115px;
+  left: 100px;
+}
+
+.rightarm {
+  z-index: 5;
+  top: 128px;
+  left: 120px;
+}
+
+.leftarm {
+  z-index: 5;
+  top: 128px;
+  left: 58px;
+}
+
+.righthand {
+  top: 194px;
+  left: 189px;
+}
+
+.lefthand {
+  top: 194px;
+  left: 86px;
+}
+
+.rightleg {
+  z-index: 4;
+  top: 170px;
+  left: 129px;
+}
+
+.leftleg {
+  z-index: 4;
+  top: 170px;
+  left: 94px;
+}
+
+.rightfoot {
+  top: 278px;
+  left: 142px;
+}
+
+.leftfoot {
+  top: 278px;
+  left: 80px;
+}

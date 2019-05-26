@@ -1,0 +1,26 @@
+.wrapper {
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    background: 1px solid black;
+    list-style: none;
+
+    li {
+      background-color: #54555d;
+      border-radius: 10px;
+      margin: 0.2em;
+      padding: 0 1.1em;
+      text-transform: uppercase;
+      height: 4em;
+      width: 3em;
+
+      display: flex;
+      align-items: center;
+    }
+  }
+}

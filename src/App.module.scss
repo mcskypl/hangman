@@ -13,21 +13,31 @@ body {
 
 .wrapper {
   background-color: #f5f5f5;
+  position: relative;
   margin-top: 10vh;
   margin-left: 10vw;
   border-radius: 10px;
   height: 80vh;
   width: 80vw;
+  overflow: hidden;
+
+  .triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 200px solid #4d72fa;
+    border-left: 200px solid transparent;
+  }
 
   .flex {
     display: flex;
+  }
 
-    .hangman {
-      width: 40%;
-    }
-
-    .letters {
-      width: 60%;
-    }
+  .solution {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 }

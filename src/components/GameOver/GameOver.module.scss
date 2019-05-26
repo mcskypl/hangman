@@ -1,0 +1,36 @@
+@keyframes view {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  animation: view 0.25s ease-in-out;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba($color: #222222, $alpha: 0.98);
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    margin-top: 2.5em;
+    padding: 0.6em 2em;
+    background: none;
+    color: #ffb922;
+    font-size: 20px;
+    border: 2.5px dashed #ffb922;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
