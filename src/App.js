@@ -33,13 +33,13 @@ class App extends React.Component {
   initGame = () => {
     axios.post(gameAPI).then(res => {
       this.setState({
+        solutionAPI: `https://hangman-api.herokuapp.com/hangman?token=${res.data.token}`,
+        // eslint-disable-next-line react/no-unused-state
+        blankSolution: res.data.hangman,
         key: '',
         steps: 0,
         over: false,
         win: false,
-        solutionAPI: `https://hangman-api.herokuapp.com/hangman?token=${res.data.token}`,
-        // eslint-disable-next-line react/no-unused-state
-        blankSolution: res.data.hangman,
       });
 
       axios.get(this.state.solutionAPI).then(res2 => {
@@ -76,10 +76,9 @@ class App extends React.Component {
   };
 
   checkLetter = e => {
-    this.setState({
-      // eslint-disable-next-line react/no-access-state-in-setstate
-      key: this.state.key + e.key,
-    });
+    this.setState(prevState => ({
+      key: prevState.key + e.key,
+    }));
 
     const indices = [];
     const array = this.state.solutionTab;
@@ -122,15 +121,13 @@ class App extends React.Component {
 
   over = ids => {
     if (ids === -1) {
-      this.setState({
-        // eslint-disable-next-line react/no-access-state-in-setstate
-        steps: this.state.steps + 1,
-      });
+      this.setState(prevState => ({
+        steps: prevState.steps + 1,
+      }));
     }
 
     if (this.state.steps > 10) {
       this.setState({
-        // eslint-disable-next-line react/no-unused-state
         over: true,
       });
     }

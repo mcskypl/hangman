@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './Missed.module.scss';
 
-const Missed = props => {
+const Missed = ({ missed }) => {
   return (
     <div className={style.wrapper}>
       <h3>YOU MISSED:</h3>
-      <h1>{props.missed}</h1>
+      <h1>{missed}</h1>
     </div>
   );
 };
